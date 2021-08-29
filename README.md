@@ -1,5 +1,5 @@
-# MachineLearning - Fys-stk3155
+# MachineLearning - Fys-Stk3155
 
-### Groupmemebers: Morten Tryti Berg, Henrik Haugerud Carlsen, Isak Aaby
+### Groupmembers: Morten Tryti Berg, Henrik Haugerud Carlsen, Isak Aaby
 
 ### Updates coming soon
