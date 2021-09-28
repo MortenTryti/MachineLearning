@@ -247,4 +247,4 @@ def k_fold(Data, k, Func):
     print('MSE for k-fold OLS')
     print(MSE_kfold)
 
-k_fold(z, 5, x_r)
+k_fold(z, 10, x_r)
