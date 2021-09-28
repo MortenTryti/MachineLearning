@@ -12,6 +12,11 @@ from sklearn.linear_model import Lasso
 from sklearn.utils import resample
 from statistics import NormalDist
 
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.preprocessing import PolynomialFeatures
+
+
 
 # FrankeFunction
 def FrankeFunction(x, y):
@@ -52,7 +57,7 @@ def create_X(x, y, n):
     return X
 
 
-# making the OCS regression
+# making the OLS regression
 def OLSmethod(X, z):
     return np.linalg.pinv(X.T @ X) @ X.T @ z
 
@@ -104,11 +109,11 @@ x, y = np.meshgrid(x,y)
 
 
 z = FrankeFunction(x, y)
-z = z + 0.1 * np.random.randn(z.shape[0])
+z = z #+ 0.1 * np.random.randn(z.shape[0])
 
 #surfaceplot(x,y,z)
 
-n = 5
+n = 6
 
 x = np.sort(np.random.uniform(0.0, 1.0, npoints))
 y = np.sort(np.random.uniform(0.0, 1.0, npoints))
@@ -127,34 +132,18 @@ print(np.var(betaOLS))
 print(np.std(betaOLS))
 print(betaOLS)
 
-
-
-def confidence_int(data, z):
-    data = data.ravel()
-    mu_beta = np.mean(betaOLS)
-    sigma_beta = np.std(betaOLS)
-    sqrt_n = len(data)
-    upper = mu_beta + z*sigma_beta / sqrt_n
-    lower = mu_beta - z*sigma_beta / sqrt_n
-
-    return lower, upper
-lower = confidence_int(betaOLS,1.96)
-upper = confidence_int(betaOLS, 1.96)
-print(f"Confidence interval for betaOLS [{lower}, {upper}]")
-
-print(np.shape(X.T @ X))
-print(betaOLS.shape)
-print(len(betaOLS))
-def c_int(data,z):
+def conf_int(data,z):
     d = np.linalg.pinv(X.T @ X)
     beta_i_var = np.zeros(len(betaOLS))
     sigma = np.var(FrankeFunction(x,y))
     for i in range(len(betaOLS)):
-        beta_i_var[i] = d[i,i] * sigma
+        beta_i_var[i] = d[i,i] ###* sigma
     print(d[i,i])
     return beta_i_var
-confidence = c_int(X, 1.96)
+confidence = conf_int(X, 1.96)
 print(confidence)
+
+
 
 
 
@@ -214,3 +203,48 @@ print("For the scaled test data we get a MSE and R2 of: ")
 ztilde = X_stest @ betascaledOCS
 
 printQ(z_stest,ztilde)
+
+
+
+print(np.shape(X))
+print(np.shape(z))
+
+"""Forsøker å splitte dataen z=Frankefunction(x,y) til 5 folds og så finne MSE ved å bruke OLSmethod
+av de dedikerte train og test settene.
+
+Skjønner ikke hvorfor Morten, i sitt eksempel lager random data x_r som ha deler opp sammen med dataen shrink.
+
+"""
+
+x_r = np.random.randn(100)
+def k_fold(Data, k, Func):
+
+    "Splitting the data"
+    k_split = KFold(n_splits = k)
+
+    "CV to calculate MSE"
+    k_scores= np.zeros(k)
+
+    i = 0
+    for k_train_index, k_test_index in k_split.split(Data):
+        k_xtrain = Data[k_train_index]
+        k_ytrain = x_r[k_train_index]
+
+        k_xtest = Data[k_test_index]
+        k_ytest = x_r[k_test_index]
+
+        #k_Xtrain = poly.fit_transform(k_xtrain[:, np.newaxis])
+        "Finding betaOLS for each k"
+        k_OLS = OLSmethod(k_xtrain, k_ytrain)
+
+        #k_Xtest = poly.fit_transform(k_xtest[:, np.newaxis])
+        model_predict = k_xtest @ k_OLS
+
+        k_scores[i] = MSE(k_ytest, model_predict)
+
+    i += 1
+    MSE_kfold = np.mean(k_scores)
+    print('MSE for k-fold OLS')
+    print(MSE_kfold)
+
+k_fold(z, 5, x_r)
