@@ -9,7 +9,7 @@
 
 ### Prerequisites
 
-If the user needs to install something or run something before using your code, let them know here.
+
 
 ### Functions
 The functions of our script is as follows
@@ -71,7 +71,7 @@ A function that returns the MSE for a k fold analysis of the Lasso regression
 
 ### Missing Functionality
 
-Here you can name limitations.
+
 
 ### Usage
 
