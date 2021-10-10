@@ -5,7 +5,7 @@
 
 # README.md Project1
 Project1.ipynb answers problems 1-5.
-Task 6.ipynb answers problem 6.
+Task 6.ipynb answers problem 6. This was done to save the kernel from going over the limit given the sometimes large amount of data.
 
 All the figures in the pdf can be found in the figure directory
 
