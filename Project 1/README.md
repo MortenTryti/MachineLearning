@@ -8,6 +8,7 @@ Project1.ipynb answers problems 1-5.
 Task 6.ipynb answers problem 6.
 
 All the figures in the pdf can be found in the figure directory
+
 The .tif file is a map of a little piece of Norway outside of Stavanger.
 
 The Report.pdf file is the full report for project 1.
