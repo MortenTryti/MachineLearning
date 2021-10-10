@@ -9,7 +9,7 @@ Task 6.ipynb answers problem 6. This was done to save the kernel from going over
 
 All the figures in the pdf can be found in the figure directory
 
-The .tif file is a map of a little piece of Norway outside of Stavanger.
+The .tif file is a topological map of a little piece of Norway outside of Stavanger.
 
 The Report.pdf file is the full report for project 1.
 
