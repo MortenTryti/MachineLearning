@@ -5,7 +5,6 @@
 
 # README.md Project1
 
-## Task 2.x
 
 ### Prerequisites
 
