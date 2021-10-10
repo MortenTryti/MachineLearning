@@ -13,14 +13,14 @@ Task 6.ipynb answers problem 6.
 
 ### Functions
 The functions of our script is as follows
--FrankeFunction(x,y)
-  A function used to simulate a set of data we wish to fit
+#### FrankeFunction(x,y)
+A function used to simulate a set of data we wish to fit
  
  #### R2(y_data, y_model)
 Calculates the R2 value ofa fit and the data
  
  #### MSE(y,ytilde)
- Calculates the MSE between a fit and the data
+Calculates the MSE between a fit and the data
 
 #### create_X(x, y, n )
 Creates a n-th order polynomial with crossterms
