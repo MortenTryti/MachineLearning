@@ -22,22 +22,4 @@ Here you can name limitations.
 
 ### Usage
 
-Here you can explain how to use the code, e.g.
-
-
-To do "A" the user needs to run the following command
-
-```bash
-commmand1 arguments
-```
-
-To do "B" the user needs to run the following command
-
-```bash
-commmand2 arguments
-```
-## Task 2.y
-.
-.
-.
-
+Run the programs by running the jupyter notebooks. Some notebooks may require the user to run the notebook locally in order to not run out of memory.
