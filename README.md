@@ -1,4 +1,4 @@
-# MachineLearning - Fys-Stk3155
+# MachineLearning - Fys-Stk3155/4155
 
 ### Groupmembers: Morten Tryti Berg, Henrik Haugerud Carlsen, Jonas Rønning
 
