@@ -6,14 +6,8 @@
 ### Where to find what.
 In the folder figs you will find the figures presented in the rapport. 
 
+The programming tasks were completed in the jupyter notebook files. You can find the code for task a in task a.ipynb, the code for task b in task b.ipynb and so on. Moreover every result with a single hidden layer being used can be calculated or found with the file singlehidden.ipynb and for multiplayered FFNN the file General Neuron.ipynb was used.
 
 
 
-
-### Functions
-
-
-
-### Usage
-
-Run the programs by running the jupyter notebooks. Some notebooks may require the user to run the notebook locally in order to not run out of memory.
+### Rapport
