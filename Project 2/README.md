@@ -3,7 +3,10 @@
 ### Groupmembers: Morten Tryti Berg, Henrik Haugerud Carlsen, Jonas Rønning
 
 
-### Prerequisites
+### Where to find what.
+In the folder figs you will find the figures presented in the rapport. 
+
+
 
 
 
