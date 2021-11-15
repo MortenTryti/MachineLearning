@@ -11,4 +11,4 @@ The programming tasks were completed in the jupyter notebook files. You can find
 
 
 ### Rapport
-The rapport which we count as our "delivery" is named rapport2.pdf and should be the only pdf file in this repository.
+The rapport which we count as our "delivery" is named rapport_2.pdf and should be the only pdf file in this repository.
