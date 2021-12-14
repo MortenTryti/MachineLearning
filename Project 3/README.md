@@ -119,7 +119,7 @@ def solution(x,t,N_hidden,eta, activation_function ,output_function, epoch,Minib
 
 def solution_eigen(t,N_hidden,eta, activation_function ,output_function, epoch,Minibach,A,x_0):
     W_hidden, W_out, b_hidden, b_out = Set_weights_and_bias(1,N_hidden,6)
- #   print('Initial cost: ', cost_function(x,t,W_hidden, W_out, b_hidden, b_out,activation_function, output_function))
+ 
     cost_function_eigen(t,W_hidden, W_out, b_hidden, b_out,activation_function, output_function,A,x_0)
     
     cost_func_wh_grad = elementwise_grad(cost_function_eigen,1)
@@ -139,7 +139,7 @@ def solution_eigen(t,N_hidden,eta, activation_function ,output_function, epoch,M
             b_out -= eta*cost_func_bo_grad(t_bach,W_hidden, W_out, b_hidden, b_out,activation_function, output_function,A,x_0)
       #  print("finished iteration number: ", e)
    
-   # print('Final cost: ', cost_function(x,t,W_hidden, W_out, b_hidden, b_out,activation_function, output_function))
+   
     return W_hidden, W_out, b_hidden, b_out
 
 #### This one is nice when we want to study how the MSE converges
@@ -162,5 +162,5 @@ def Solution2(x,t,N_hidden,eta, epoch,Minibach, W_hidden, W_out, b_hidden, b_out
             b_out -= eta*cost_func_bo_grad(x_bach,t_bach,W_hidden, W_out, b_hidden, b_out,activation_function, output_function)
       #  print("finished iteration number: ", e)
    
-   # print('Final cost: ', cost_function(x,t,W_hidden, W_out, b_hidden, b_out,activation_function, output_function))
+   
     return W_hidden, W_out, b_hidden, b_out
