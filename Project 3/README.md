@@ -111,7 +111,7 @@ Returns the function value of sin(pi*x).
 Uses feed_forward_eigen() and X to return a guess of trial function.
 ```
 x,t = X[0],X[1]
-    return (1-t)*u(x) + x*(1-x)*t*feed_forward_eigen(X,W_hidden, W_out, b_hidden, b_out,activation_function, output_function)
+    return (1-t)*u(x) + x*(1-x)*t*feed_forward(X,W_hidden, W_out, b_hidden, b_out,activation_function, output_function)
 ```
 
 
