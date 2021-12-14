@@ -4,6 +4,9 @@
 
 
 # README.md Project3
+For our project number 3 we choose to do the suggested task, which was to solve the diffusion equation analytically, numerically and with a neural network as well as 
+solving an eigenvalue problem. 
+
 P3_taskb.ipynb contains all the code for solving problem b).
 Our_network.ipynb contains all the code for solving problems c and d).
 The Report.pdf file is the full report for project 3.
