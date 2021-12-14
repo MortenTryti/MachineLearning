@@ -4,8 +4,8 @@
 
 
 # README.md Project3
-P3_taskb.ipynb answers problem b).
-Our_network.ipynb answers problem c and d).
+P3_taskb.ipynb contains all the code for solving problem b).
+Our_network.ipynb contains all the code for solving problems c and d).
 The Report.pdf file is the full report for project 3.
 All the figures in the pdf can be found in the figure directory.
 
