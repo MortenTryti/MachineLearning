@@ -60,8 +60,9 @@ Returns Weights for hidden layer, weights for the output layer, the output for t
 
 
 ### feed_forward_train(X,W_hidden, W_out, b_hidden, b_out,activation_function, output_function)
-#(From lecture notes)
-#(Used in order to use our own backpropagation from project 2)
+(From lecture notes)
+
+(Used in order to use our own backpropagation from project 2)
 Takes as input the designmatrix, X, the weights for the output layer, the output for the hidden layer(s) and the output for the output layer, an activation function and an output function. Returns the output of the activation function in the hidden layer(s), the output of the output function on the output layer, the output from the hidden layer(s) and the output from the output layer.
 ```
 #### Hidden attac
