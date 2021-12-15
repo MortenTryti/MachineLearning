@@ -26,7 +26,7 @@ Calculates the function values of the sigmoid activation function.
 
 
 ### def Identity(y):
-Applies the identity function to input y, so nothing happens.
+Applies the identity function to input y, so the input is returned.
 
 
 ### RELU(y)
